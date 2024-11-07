@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlflow
+spec:
+  project: default
+  source:
+    chart: mlflow
+    repoURL: registry-1.docker.io/bitnamicharts # note: the oci:// syntax is not included.
+    targetRevision: HEAD
+  destination:
+    name: "mlflow"
+    namespace: mlflow
