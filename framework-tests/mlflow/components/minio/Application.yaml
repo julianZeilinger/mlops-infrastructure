@@ -1,18 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: minio
+  name: mlflow-test
+  namespace: argocd
 spec:
   project: default
   source:
+    repoURL: "https://charts.bitnami.com/bitnami"
     chart: minio
-    repoURL: registry-1.docker.io/bitnamicharts
-    targetRevision: HEAD
+    targetRevision: 14.8.4
     helm:
-      valuesObject:
+      values: |
+        # Überschreiben Sie hier die Standardwerte des Charts
         auth:
           accessKey: minio
           secretKey: minio123
   destination:
-    name: "minio"
+    server: "https://kubernetes.default.svc"
     namespace: mlflow
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mlflow
+  name: mlflow-test
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: "https://charts.bitnami.com/bitnami"
     chart: mlflow
-    targetRevision: 2.1.0 # Passen Sie die gewünschte Chart-Version an
+    targetRevision: 2.1.0
     helm:
       values: |
         # Überschreiben Sie hier die Standardwerte des Charts
