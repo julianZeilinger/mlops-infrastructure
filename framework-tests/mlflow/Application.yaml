@@ -9,10 +9,14 @@ spec:
     repoURL: "https://github.com/julianZeilinger/mlops-infrastructure"
     path: "framework-tests/mlflow/components"
     targetRevision: HEAD
+    directory:
+      recurse: true
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: default
+    namespace: mlflow
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
