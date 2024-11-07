@@ -1,13 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mlflow
+  name: minio
 spec:
   project: default
   source:
-    chart: mlflow
+    chart: minio
     repoURL: registry-1.docker.io/bitnamicharts
     targetRevision: HEAD
+    helm:
+      valuesObject:
+        auth:
+          accessKey: minio
+          secretKey: minio123
   destination:
-    name: "mlflow"
+    name: "minio"
     namespace: mlflow
