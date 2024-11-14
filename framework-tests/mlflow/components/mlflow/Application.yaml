@@ -16,13 +16,6 @@ spec:
           enabled: true
         service:
           type: ClusterIP
-        resources:
-          requests:
-            cpu: 100m
-            memory: 256Mi
-          limits:
-            cpu: 200m
-            memory: 512Mi
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
