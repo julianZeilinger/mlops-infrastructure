@@ -16,7 +16,9 @@ spec:
           enabled: true
         tracking:
           auth:
-            enabled: false
+            enabled: true
+            username: admin
+            password: admin
           service:
             type: LoadBalancer
             ports:
