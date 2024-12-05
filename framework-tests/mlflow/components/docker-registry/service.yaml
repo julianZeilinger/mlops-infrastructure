@@ -6,3 +6,7 @@ spec:
   type: LoadBalancer
   selector:
     app: docker-registry
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
