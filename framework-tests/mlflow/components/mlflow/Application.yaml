@@ -15,7 +15,8 @@ spec:
         persistence:
           enabled: true
         service:
-          type: ClusterIP
+          type: LoadBalancer
+          port: 5000
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
