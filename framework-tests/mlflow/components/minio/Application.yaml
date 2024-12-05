@@ -17,8 +17,8 @@ spec:
         service:
           type: LoadBalancer
           ports:
-            api: 8080
-            console: 80
+            api: 80
+            console: 8080
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
