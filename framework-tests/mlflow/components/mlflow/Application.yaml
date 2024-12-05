@@ -21,6 +21,10 @@ spec:
             password: admin
           service:
             type: LoadBalancer
+        minio:
+          enabled: true
+          service:
+            type: LoadBalancer
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
