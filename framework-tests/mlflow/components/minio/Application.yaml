@@ -11,12 +11,9 @@ spec:
     targetRevision: 14.8.4
     helm:
       values: |
-        # Überschreiben Sie hier die Standardwerte des Charts
-        auth:
-          accessKey: minio
-          secretKey: minio123
         service:
           type: LoadBalancer
+          loadBalancerSourceRanges: []
         networkPolicy:
           enabled: false
   destination:
