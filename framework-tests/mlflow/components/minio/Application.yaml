@@ -12,10 +12,10 @@ spec:
     helm:
       values: |
         service:
-          type: ClusterIP
-        ingress:
-          enabled: true
-          ingressClassName: nginx
+          type: LoadBalancer
+          ports:
+            api: 8080
+            console: 80
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
