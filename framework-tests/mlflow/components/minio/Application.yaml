@@ -17,6 +17,8 @@ spec:
           secretKey: minio123
         service:
           type: LoadBalancer
+        networkPolicy:
+          enabled: false
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
