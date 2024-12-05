@@ -11,30 +11,14 @@ spec:
     targetRevision: 14.8.4
     helm:
       values: |
+        auth:
+          rootUser: minio-admin
+          rootPassword: minio-secret-password
         service:
           type: LoadBalancer
           ports:
             api: 8080
             console: 80
-        provisioning:
-          users:
-            - username: user1
-              password: password1
-              disabled: false
-              policies:
-                - readwrite
-            - username: user2
-              password: password2
-              disabled: false
-              policies:
-                - readonly
-              setPolicies: true
-            - username: admin
-              password: adminpassword
-              disabled: false
-              policies:
-                - consoleAdmin
-              setPolicies: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
