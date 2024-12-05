@@ -21,8 +21,6 @@ spec:
             password: admin
           service:
             type: LoadBalancer
-            ports:
-              http: 5000
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
