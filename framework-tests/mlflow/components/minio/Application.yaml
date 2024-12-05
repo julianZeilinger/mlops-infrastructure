@@ -11,9 +11,6 @@ spec:
     targetRevision: 14.8.4
     helm:
       values: |
-        auth:
-          rootUser: admin
-          rootPassword: admin
         service:
           type: LoadBalancer
           ports:
