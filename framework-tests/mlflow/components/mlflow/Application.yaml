@@ -14,14 +14,10 @@ spec:
         # Überschreiben Sie hier die Standardwerte des Charts
         persistence:
           enabled: true
+        auth:
+          enabled: false
         service:
           type: LoadBalancer
-          ports:
-            http: 5000
-        auth:
-          enabled: true
-          username: user
-          password: admin
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
