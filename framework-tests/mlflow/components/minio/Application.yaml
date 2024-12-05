@@ -13,6 +13,9 @@ spec:
       values: |
         service:
           type: LoadBalancer
+          ports:
+            api: 80
+            console: 9001
           loadBalancerSourceRanges: []
         networkPolicy:
           enabled: false
