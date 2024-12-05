@@ -11,10 +11,6 @@ spec:
     targetRevision: 14.8.4
     helm:
       values: |
-        # Überschreiben Sie hier die Standardwerte des Charts
-        auth:
-          rootUser: admin
-          rootPassword: admin
         service:
           type: LoadBalancer
           ports:
