@@ -16,10 +16,7 @@ spec:
           accessKey: minio
           secretKey: minio123
         service:
-          type: NodePort
-          nodePorts:
-            console: 32001  # Optional, if using MinIO console
-            api: 32000      # Expose MinIO API on this port
+          type: LoadBalancer
         networkPolicy:
           enabled: false
   destination:
