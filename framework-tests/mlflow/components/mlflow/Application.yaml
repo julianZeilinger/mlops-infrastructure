@@ -16,7 +16,8 @@ spec:
           enabled: true
         service:
           type: LoadBalancer
-          port: 5000
+          ports:
+            http: 5000
         auth:
           enabled: true
           username: user
