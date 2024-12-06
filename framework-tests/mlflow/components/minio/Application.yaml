@@ -19,6 +19,11 @@ spec:
           ports:
             api: 80
             console: 8080
+        provisioning:
+          networkPolicy:
+            enabled: false
+        networkPolicy:
+          enabled: false
   destination:
     server: "https://kubernetes.default.svc"
     namespace: mlflow
