@@ -18,7 +18,7 @@ spec:
           type: LoadBalancer
           ports:
             api: 80
-            console: 8080
+            console: 443
         provisioning:
           networkPolicy:
             enabled: false
