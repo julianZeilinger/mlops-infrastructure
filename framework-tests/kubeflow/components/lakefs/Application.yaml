@@ -19,10 +19,9 @@ spec:
             type: local
           blockstore:
             type: s3
-            signing:
-              secret_key: "my-random-secret-key"
             s3:
               force_path_style: true
+              discover_bucket_region: false
               endpoint: "http://minio.minio.svc.cluster.local:9000"
               credentials:
                 access_key_id: 53F1IakE0QkKEB4x6urQ
