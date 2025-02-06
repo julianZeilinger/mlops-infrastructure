@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgres
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://charts.bitnami.com/bitnami"
+    chart: postgresql
+    targetRevision: "12.3.4"  # Passen Sie die Version nach Bedarf an
+    helm:
+      values: |
+        fullnameOverride: postgres
+        postgresqlUsername: lakefs
+        postgresqlPassword: lakefs-secret
+        postgresqlDatabase: lakefs
+        service:
+          port: 5432
+        persistence:
+          enabled: true
+          storageClass: "standard"
+          size: 2Gi
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: lakefs
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
