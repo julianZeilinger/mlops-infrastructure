@@ -21,7 +21,7 @@ spec:
           blockstore:
             type: s3
             signing:
-              key: "my-random-secret-key"
+              secret_key: "my-random-secret-key"
             s3:
               endpoint: minio.minio.svc.cluster.local:9000
               credentials:
