@@ -22,8 +22,8 @@ spec:
             type: s3
             s3:
               endpoint: minio.minio.svc.cluster.local:9000
-              access_key_id: minio-admin
-              secret_access_key: minio-secret-password
+              access_key_id: iRuq4AehO6MJjZpkTkD4
+              secret_access_key: Pyf17ITMrmWrMzHFXiHBNTDxle2rSiC9myzhPGS9
               bucket: lakefs
               ssl: false
           gateways:
