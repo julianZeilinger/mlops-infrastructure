@@ -15,6 +15,10 @@ spec:
           user: "user"
           password: "lakefs"
           database: "lakefs"
+          postgresPassword: "lakefs"
+          replicationPassword: "lakefs"
+        passwordUpdateJob:
+          enabled: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: postgres
