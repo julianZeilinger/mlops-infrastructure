@@ -14,8 +14,7 @@ spec:
         secrets:
           authEncryptSecretKey: "my-random-secret-key"
         lakefsConfig: |
-          server:
-            listen_addr: ":8000"
+          listen_address: ":8000"
           database:
             type: local
           blockstore:
