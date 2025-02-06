@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: postgres
+  name: postgresql
   namespace: argocd
 spec:
   project: default
@@ -9,17 +9,9 @@ spec:
     repoURL: "https://charts.bitnami.com/bitnami"
     chart: postgresql
     targetRevision: 16.4.6
-    helm:
-      values: |
-        fullnameOverride: postgres
-        auth:
-          postgresPassword: lakefs-secret
-          username: lakefs
-          password: lakefs-secret
-          database: lakefs
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: postgres
+    namespace: postgresql
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
