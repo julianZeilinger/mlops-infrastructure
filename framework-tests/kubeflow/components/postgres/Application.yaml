@@ -14,8 +14,6 @@ spec:
         auth:
           user: "user"
           password: "lakefs"
-        passwordUpdateJob:
-          enabled: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: postgres
