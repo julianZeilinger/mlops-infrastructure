@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: "https://charts.bitnami.com/bitnami"
     chart: postgresql
-    targetRevision: "12.3.4"  # Passen Sie die Version nach Bedarf an
+    targetRevision: "16.4.6"  # Passen Sie die Version nach Bedarf an
     helm:
       values: |
         fullnameOverride: postgres
