@@ -8,23 +8,20 @@ spec:
   source:
     repoURL: "https://charts.bitnami.com/bitnami"
     chart: postgresql
-    targetRevision: "16.4.6"  # Passen Sie die Version nach Bedarf an
+    targetRevision: "16.4.6"
     helm:
       values: |
         fullnameOverride: postgres
-        postgresqlUsername: lakefs
-        postgresqlPassword: lakefs-secret
-        postgresqlDatabase: lakefs
-        service:
-          port: 5432
-        persistence:
-          enabled: true
-          storageClass: "standard"
-          size: 2Gi
+        auth:
+          username: lakefs
+          password: lakefs-secret
+          database: lakefs
   destination:
     server: "https://kubernetes.default.svc"
     namespace: lakefs
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
