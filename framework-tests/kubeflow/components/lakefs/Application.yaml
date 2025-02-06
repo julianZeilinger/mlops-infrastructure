@@ -12,13 +12,12 @@ spec:
     helm:
       values: |
         secrets:
-          databaseConnectionString: "postgres://lakefs:lakefs-secret@postgres.lakefs.svc.cluster.local:5432/lakefs?sslmode=disable"
           authEncryptSecretKey: "my-random-secret-key"
         lakefsConfig: |
           server:
             listen_addr: ":8000"
           database:
-            type: postgres
+            type: sqlite
           blockstore:
             type: s3
             s3:
