@@ -22,11 +22,10 @@ spec:
             signing:
               secret_key: "my-random-secret-key"
             s3:
-              endpoint: "https://minio.minio.svc.cluster.local:9000"
+              endpoint: "http://minio.minio.svc.cluster.local:9000"
               credentials:
                 access_key_id: 53F1IakE0QkKEB4x6urQ
                 secret_access_key: 8lrKVluRMc4ASgL4RNAbOEiGWEvvbB4GDuLs0ZKh
-                use_ssl: false
 
   destination:
     server: "https://kubernetes.default.svc"
