@@ -18,9 +18,7 @@ spec:
           password: lakefs-secret
           database: lakefs
         persistence:
-          enabled: true
-          storageClass: "standard"  # Passen Sie diesen Wert an Ihre Umgebung an
-          size: 8Gi
+          enabled: false
   destination:
     server: "https://kubernetes.default.svc"
     namespace: postgresql
