@@ -13,9 +13,7 @@ spec:
       values: |
         auth:
           user: "user"
-          postgresPassword: "lakefs"
           password: "lakefs"
-          replicationPassword: "lakefs"
         passwordUpdateJob:
           enabled: true
   destination:

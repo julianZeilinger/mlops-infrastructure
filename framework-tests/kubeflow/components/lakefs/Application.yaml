@@ -16,7 +16,9 @@ spec:
         lakefsConfig: |
           listen_address: ":8000"
           database:
-            type: local
+            type: "postgres"
+            postgres:
+              connection_string: "postgres://user:lakefs@postgres.postgres.svc.cluster.local:5432/lakefs?sslmode=disable"
           blockstore:
             type: s3
             s3:
