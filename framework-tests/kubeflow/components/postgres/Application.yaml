@@ -13,12 +13,13 @@ spec:
       values: |
         fullnameOverride: postgres
         auth:
+          postgresPassword: lakefs-secret
           username: lakefs
           password: lakefs-secret
           database: lakefs
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: postgresql
+    namespace: postgres
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
