@@ -13,8 +13,6 @@ spec:
       values: |
         secrets:
           authEncryptSecretKey: "my-random-secret-key"
-        service:
-          type: LoadBalancer
         lakefsConfig: |
           listen_address: ":8000"
           database:
