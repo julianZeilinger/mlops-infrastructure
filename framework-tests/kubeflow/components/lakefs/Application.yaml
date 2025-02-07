@@ -13,8 +13,11 @@ spec:
       values: |
         secrets:
           authEncryptSecretKey: "my-random-secret-key"
-        service:
-          type: LoadBalancer
+        ingress:
+          enabled: true
+          hosts:
+            - host: "lakefs.kubeflow.com"
+              paths:
         lakefsConfig: |
           listen_address: ":8000"
           database:
