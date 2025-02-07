@@ -13,13 +13,6 @@ spec:
       values: |
         secrets:
           authEncryptSecretKey: "my-random-secret-key"
-        ingress:
-          enabled: true
-          ingressClassName: "nginx"
-          hosts:
-            - host: "lakefs.kubeflow.com"
-              paths:
-                - /
         lakefsConfig: |
           listen_address: ":8000"
           database:
