@@ -15,9 +15,10 @@ spec:
           authEncryptSecretKey: "my-random-secret-key"
         ingress:
           enabled: true
+          ingressClassName: "nginx"
           hosts:
             - host: "lakefs.kubeflow.com"
-              paths:
+              paths: /
         lakefsConfig: |
           listen_address: ":8000"
           database:
