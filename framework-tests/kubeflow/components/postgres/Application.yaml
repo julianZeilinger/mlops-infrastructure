@@ -12,6 +12,7 @@ spec:
     helm:
       values: |
         auth:
+          enabledPostgresUser: true
           user: "user"
           password: "lakefs"
           database: "lakefs"
