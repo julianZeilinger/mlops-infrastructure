@@ -18,7 +18,7 @@ spec:
           database:
             type: "postgres"
             postgres:
-              connection_string: "postgres://user:lakefs@postgres-postgresql.postgres.svc.cluster.local:5432/lakefs?sslmode=disable"
+              connection_string: "postgres://postgres:lakefs@postgres-postgresql.postgres.svc.cluster.local:5432/lakefs?sslmode=disable"
           blockstore:
             type: s3
             s3:
